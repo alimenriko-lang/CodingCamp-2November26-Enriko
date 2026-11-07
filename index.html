@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do Life Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Storage Error Banner -->
+  <div id="storage-error-banner" hidden>
+    Gagal memuat data dari penyimpanan lokal. Data mungkin tidak tersimpan dengan benar.
+  </div>
+
+  <main class="dashboard">
+
+    <!-- Greeting Widget -->
+    <section class="widget widget--greeting" aria-label="Greeting">
+      <p id="clock-display">--:--</p>
+      <p id="date-display"></p>
+      <p id="greeting-text"></p>
+    </section>
+
+    <!-- Focus Timer Widget -->
+    <section class="widget widget--timer" aria-label="Focus Timer">
+      <h2>Focus Timer</h2>
+      <p id="timer-display">25:00</p>
+      <div class="timer-controls">
+        <button id="timer-start-btn" type="button">Start</button>
+        <button id="timer-stop-btn" type="button">Stop</button>
+        <button id="timer-reset-btn" type="button">Reset</button>
+      </div>
+      <p id="timer-message" hidden>Sesi selesai! Istirahatlah sejenak.</p>
+    </section>
+
+    <!-- To-Do List Widget -->
+    <section class="widget widget--todo" aria-label="To-Do List">
+      <h2>To-Do List</h2>
+      <div class="todo-add-form">
+        <input
+          id="todo-input"
+          type="text"
+          maxlength="200"
+          placeholder="Tambahkan tugas baru..."
+          aria-label="Deskripsi tugas baru"
+        />
+        <button id="todo-add-btn" type="button">Tambah</button>
+      </div>
+      <p id="todo-error" hidden aria-live="polite"></p>
+      <ul id="todo-list" aria-label="Daftar tugas"></ul>
+      <p id="todo-empty">Belum ada tugas. Tambahkan tugas baru!</p>
+    </section>
+
+    <!-- Quick Links Widget -->
+    <section class="widget widget--links" aria-label="Quick Links">
+      <h2>Quick Links</h2>
+      <div class="links-add-form">
+        <input
+          id="link-label-input"
+          type="text"
+          placeholder="Label (contoh: GitHub)"
+          aria-label="Label tautan"
+        />
+        <input
+          id="link-url-input"
+          type="url"
+          placeholder="URL (contoh: https://github.com)"
+          aria-label="URL tautan"
+        />
+        <button id="link-add-btn" type="button">Tambah</button>
+      </div>
+      <p id="link-error" hidden aria-live="polite"></p>
+      <div id="links-container" aria-label="Koleksi tautan"></div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

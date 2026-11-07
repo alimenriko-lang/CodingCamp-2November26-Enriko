@@ -1,0 +1,28 @@
+{
+  "name": "codingcamp-2november26-enriko",
+  "version": "1.0.0",
+  "description": "Create To-Do list live Dashboard in kiro",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alimenriko-lang/CodingCamp-2November26-Enriko.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/alimenriko-lang/CodingCamp-2November26-Enriko/issues"
+  },
+  "homepage": "https://github.com/alimenriko-lang/CodingCamp-2November26-Enriko#readme",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.1.0",
+    "fast-check": "^4.10.2",
+    "jsdom": "^31.0.0",
+    "vitest": "^5.1.0"
+  }
+}
